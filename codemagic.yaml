@@ -3,3 +3,10 @@ workflows:
     name: Hello world workflow
     scripts:
         - echo "Hello World!"
+  build-android:
+    scripts:
+      - name: Build Android APK
+        working_directory: android
+        script: ./gradlew assembleRelease
+    artifacts:
+      - app/build/outputs/**/**/*.apk
