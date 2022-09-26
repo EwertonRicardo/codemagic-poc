@@ -10,3 +10,8 @@ workflows:
         script: ./gradlew assembleRelease
     artifacts:
       - app/build/outputs/**/**/*.apk
+  my-workflow:
+    publishing:
+      email:
+        recipients:
+          - ewerton.ricardo98@gmail.com
